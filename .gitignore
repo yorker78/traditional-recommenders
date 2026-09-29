@@ -1,0 +1,7 @@
+# Datasets and intermediate results are downloaded or generated locally
+*.feather
+*.csv
+*.npz
+.ipynb_checkpoints/
+.venv/
+.DS_Store
