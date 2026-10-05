@@ -10,10 +10,10 @@ Best R² for each approach:
 
 | Dataset | Users | Ratings | Average rating | kNN (k = 500) | SVD (best k) |
 | --- | --- | --- | --- | --- | --- |
-| MovieLens 25M | 162,541 | 24.9M | 0.184 | 0.240 | **0.287** (50) |
-| Netflix Prize | 473,816 | 51.0M | 0.132 | **0.219** | 0.187 (5) |
-| Yahoo! Music R2 (subsample) | 200,000 | 76.3M | 0.112 | 0.218 | **0.242** (450) |
-| BoardGameGeek | 332,079 | 18.9M | 0.259 | **0.269** | 0.176 (25) |
+| MovieLens 25M | 162,541 | 24.9M | 0.181 | 0.240 | **0.287** (50) |
+| Netflix Prize | 473,816 | 51.0M | 0.131 | **0.219** | 0.187 (5) |
+| Yahoo! Music R2 (subsample) | 200,000 | 76.3M | 0.107 | 0.218 | **0.242** (450) |
+| BoardGameGeek | 332,079 | 18.9M | 0.260 | **0.269** | 0.176 (25) |
 
 kNN beat the average-rating baseline everywhere, with diminishing returns after about 100 neighbors. SVD did best on MovieLens and Yahoo! Music but lost to kNN on Netflix and BoardGameGeek, and on BoardGameGeek it lost even to the average rating. My best guess is that the ideal number of components depends on how dense each user-item matrix is, since Netflix is the densest and peaked at 5 components, while Yahoo! Music is the sparsest and was still improving at 450.
 
